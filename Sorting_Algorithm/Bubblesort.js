@@ -16,7 +16,7 @@ function Bubblesort(arr) {
         numberofSwap++;
       }
     }
-    // console.log(arr);
+    console.log(arr);
   }
   console.log("swap", numberofSwap);
   //   console.log(arr);

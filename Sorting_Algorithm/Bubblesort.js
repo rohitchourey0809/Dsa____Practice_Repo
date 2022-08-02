@@ -1,4 +1,4 @@
-var arr = [1, 2, 6, 4, 7, 5, 0];
+var arr = [0, 1, 0, 0];
 
 function swap(arr, a, b) {
   var temp = arr[a];

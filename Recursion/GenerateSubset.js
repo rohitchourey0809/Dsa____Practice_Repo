@@ -2,14 +2,14 @@ function AllSubset(str, index, curr) {
   var N = str.length;
   if (index == N) {
     //
-    if (curr.length >= 0) {
+    if (curr.length > 0) {
       console.log(curr);
       return;
     }
     // return;
   } else {
     AllSubset(str, index + 1, curr + str[index]);
-
+//BackTracking
     AllSubset(str, index + 1, curr);
   }
 }

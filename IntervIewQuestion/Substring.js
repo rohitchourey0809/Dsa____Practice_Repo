@@ -1,21 +1,18 @@
 let fruits = ["apple", "grapes", "orange", "mango", "banana"];
 
 function filterItems(fruits, word) {
-  // return word[0]
-
+  var bag = [];
   for (var i = 0; i < fruits.length; i++) {
     var z = fruits[i];
-    var bag = "";
+
     for (var j = 0; j < z.length; j++) {
-      if ((word[0] || word[1]) === z[j]) {
-        bag += z + "";
-        // console.log("fruits", fruits[j]);
-        // return fruits[j];
+      if (word[0] === z[j] && word[1] === z[j + 1]) {
+        bag.push(z);
       } else {
         continue;
       }
     }
-    return bag;
+    console.log("bag", bag);
   }
 }
 var ans = filterItems(fruits, "ap");

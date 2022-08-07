@@ -15,12 +15,12 @@ var repeat = 0;
 var N = arr.length;
 function RepeatandMissing(arr, N) {
   for (var i = 0; i < N; i++) {
-    if (arr[Math.abs(arr[i]) - 1] > 0) {
-      arr[Math.abs(arr[i]) - 1] -= arr[Math.abs(arr[i]) - 1];
-      console.log(arr[Math.abs(arr[i]) - 1]);
-    } else {
+    // if (arr[Math.abs(arr[i]) - 1] > 0) {
+    //   arr[Math.abs(arr[i]) - 1] -= arr[Math.abs(arr[i]) - 1];
+    //   console.log("repeatarr",arr[Math.abs(arr[i]) - 1]);
+    // } else {
       repeat = Math.abs(arr[i]);
-    }
+    // }
   }
   for (var i = 0; i <=N; i++) {
     if (arr[i] === undefined) {

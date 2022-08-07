@@ -1,17 +1,16 @@
-function AllSubsets(arr, index, newsub) {
-  if (index == arr.length) {
-    if (newsub.length > 0) {
-      console.log(newsub);
-      return;
-    }
-  } else {
-    AllSubsets(arr, index + 1, newsub + arr[index]+" ");
+var obj1 = { a: 10, b: 20 };
+var obj2 = { b: 30, d: 80 };
 
-    //BackTracking
-    AllSubsets(arr, index + 1, newsub);
+let obj = {};
+for (let key in obj1) {
+  obj[key] = obj1[key];
+}
+
+for (let key in obj2) {
+  if (obj[key]) {
+    obj[key] += obj2[key];
+  } else {
+    obj[key] = obj2[key];
   }
 }
-var arr = [1, 2, 3];
-var index = 0;
-var newsub = "";
-AllSubsets(arr, index, newsub);
+console.log("obj", obj);

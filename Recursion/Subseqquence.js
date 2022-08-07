@@ -1,24 +1,22 @@
-var str = "123"
 
-function Subsequencestr(str, i, newstr) {
-  if (i == str.length) {
-   if(newstr.length >= 0)
-   {
-     console.log(newstr);
-     return;
-   }
+
+function Subsequencestr(str, index, newstr) {
+  if (index == str.length) {
+    if (newstr.length >= 0) {
+      console.log(newstr);
+      return;
+    }
+  } else {
+    Subsequencestr(str, index + 1, newstr + str[index] + " ");
+    // console.log("newstbefr",newstr);
+    Subsequencestr(str, index + 1, newstr);
+    // console.log("newstraft", newstr);
   }
-  else{
-Subsequencestr(str, i + 1, newstr + str[i]+" ");
-// console.log("newstbefr",newstr);
-Subsequencestr(str, i + 1, newstr);
-// console.log("newstraft", newstr);
-  }
-  
 }
-var newstr = [];
-var i = 0;
-Subsequencestr(str, i, newstr);
+var str = "abcd";
+var index = 0;
+var newstr = ""
+Subsequencestr(str, index, newstr);
 
 // abcd;
 // abc;
